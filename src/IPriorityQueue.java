@@ -14,7 +14,7 @@ public interface IPriorityQueue<E extends Comparable<E>> {
 	 * 
 	 * @param value
 	 */
-	public void Add(E value);
+	public void add(E value);
 	/**
 	 * 
 	 * @return
