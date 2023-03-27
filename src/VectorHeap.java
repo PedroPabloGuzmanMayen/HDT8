@@ -113,27 +113,22 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 
 	@Override
 	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		return data.get(0);
 	}
-
-
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return data.isEmpty();
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return data.size();
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+		data.clear();
 		
 	}
 	

@@ -26,8 +26,10 @@ public class Reader {
 			while((string = br.readLine())!= null) 
 			{
 				String[] parts = string.split(",");
-				v.add(new Process(parts[0], parts[1], Integer.parseInt(parts[2])));
+				Process process = new Process(parts[0], parts[1], Integer.parseInt(parts[2]));
+				v.add(process);
 			}
+			v.getFirst();
 		} catch (FileNotFoundException e) {
 			throw new FileNotFoundException("Error al leer el archivo");
 		}
