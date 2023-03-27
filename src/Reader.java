@@ -10,20 +10,22 @@ import java.util.*;
  *
  */
 public class Reader {
-	public Vector<String> Read() throws Exception
+	public void Read(VectorHeap<Process> v) throws Exception
 	{
-		Vector<String> v = new Vector<>();
+
 		File file = new File("./src/programas.txt");
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
-			String l;
-			while((l = br.readLine())!= null) 
+			String string;
+			while((string = br.readLine())!= null) 
 			{
-				v.add(l);
+				String[] parts = string.split(",");
+				Process process = new Process(parts[0], parts[1], Integer.parseInt(parts[2]));
+				v.add(process);
 			}
 		} catch (FileNotFoundException e) {
 			throw new Ex("Error al leer el archivo");
 		}
-		return v;
+
 	}	
 } 
