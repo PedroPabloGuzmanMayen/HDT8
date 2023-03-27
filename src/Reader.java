@@ -1,30 +1,35 @@
 import java.io.*;
 import java.util.*;
 
+
 /**
  * 
  */
 
 /**
- * @author gustavo
+ * @author Gustavo Cruz, Pedro Pablo Guzmán
  *
  */
 public class Reader {
+	/**
+	 * This method reads the data from a txt 
+	 * @param v
+	 * @throws Exception
+	 */
 	public void Read(VectorHeap<Process> v) throws Exception
 	{
 
-		File file = new File("./src/programas.txt");
+		File file = new File("Procesos.txt");
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String string;
 			while((string = br.readLine())!= null) 
 			{
 				String[] parts = string.split(",");
-				Process process = new Process(parts[0], parts[1], Integer.parseInt(parts[2]));
-				v.add(process);
+				v.add(new Process(parts[0], parts[1], Integer.parseInt(parts[2])));
 			}
 		} catch (FileNotFoundException e) {
-			throw new Ex("Error al leer el archivo");
+			throw new FileNotFoundException("Error al leer el archivo");
 		}
 
 	}	
