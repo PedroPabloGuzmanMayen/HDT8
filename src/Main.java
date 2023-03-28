@@ -7,11 +7,13 @@ public class Main {
 		reader.Read(vector);
 		System.out.println(vector.isEmpty());
 		System.out.println(vector.getFirst().getUsername());
+		System.out.println(vector.size());
+		System.out.println(vector.remove().getPR());
+		System.out.println(vector.remove().getPR());
+		System.out.println(vector.remove().getPR());
+		System.out.println(vector.remove().getPR());
 		System.out.println("Bienvenido, estos son los procesos del CPU ordenados en base a su prioridad: ");
-		
-		for (int i =0; i<vector.size(); i++) {
-			System.out.println(vector.remove().getNice());
-		}
+
 
 	}
 
