@@ -16,7 +16,7 @@ public class Reader {
 	 * @param v
 	 * @throws Exception
 	 */
-	public void Read(VectorHeap<Process> v) throws Exception
+	public void Read(IPriorityQueue<Process> pq) throws Exception
 	{
 
 		File file = new File("Procesos.txt");
@@ -27,9 +27,9 @@ public class Reader {
 			{
 				String[] parts = string.split(",");
 				Process process = new Process(parts[0], parts[1], Integer.parseInt(parts[2]));
-				v.add(process);
+				pq.add(process);
 			}
-			v.getFirst();
+			pq.getFirst();
 		} catch (FileNotFoundException e) {
 			throw new FileNotFoundException("Error al leer el archivo");
 		}
