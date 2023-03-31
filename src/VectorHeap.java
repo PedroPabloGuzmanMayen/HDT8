@@ -3,6 +3,7 @@ import java.util.Vector;
 public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 {
 
+
 	protected Vector<E> data; // the data, kept in heap order
 
 	public VectorHeap()
@@ -10,7 +11,10 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 	{
 		data = new Vector<E>();
 	}
-
+/**
+ * Construye un nuevo vectorHeap 
+ * @param v un vector el cuál contendrá los datos almacenados en el vector heap
+ */
 	public VectorHeap(Vector<E> v)
 	// post: constructs a new priority queue from an unordered vector
 	{
