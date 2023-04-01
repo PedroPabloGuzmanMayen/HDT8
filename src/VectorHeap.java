@@ -1,5 +1,11 @@
 import java.util.Vector;
-
+/**
+ * 
+ * @author Guztavo Cruz, Pedro Pablo Guzmán
+ * @Version 1.0.0
+ *
+ * @param <E>
+ */
 public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 {
 
@@ -25,27 +31,43 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 			add(v.get(i));
 		}
 	}
+	/**
+	 * Obtiene al padre de cada valor insertado en el VectorHeap
+	 * @param i el valor del cual se quiere saber el padre
+	 * @return el padre del valor indicado
+	 */
 	protected static int parent(int i)
 	// pre: 0 <= i < size
 	// post: returns parent of node at location i
 	{
 		return (i-1)/2;
 	}
-
+/**
+ * Obtiene al hijo izquierdo de un valor
+ * @param i el valor del cual se quiere saber el hijo
+ * @return el hijo izquierdo del valor indicado
+ */
 	protected static int left(int i)
 	// pre: 0 <= i < size
 	// post: returns index of left child of node at location i
 	{
 		return 2*i+1;
 	}
-
+/**
+ * Obtiene al hijo derecho de un valor indicado
+ * @param i al valor del cuál se quiere saber el hijo derecho
+ * @return el hijo derecho del valor indicado
+ */
 	protected static int right(int i)
 	// pre: 0 <= i < size
 	// post: returns index of right child of node at location i
 	{
 		return (2*i+1) + 1;
 	}
-
+/**
+ * Se encarga de intercambiar un valor si este es menor que un valor que está por encima de él 
+ * @param leaf el valor a intercambiar 
+ */
 	protected void percolateUp(int leaf)
 	// pre: 0 <= leaf < size
 	// post: moves node at index leaf up to appropriate position
@@ -69,7 +91,10 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E>
 		data.add(value);
 		percolateUp(data.size()-1);
 	}
-
+/**
+ * Mueve hacia abajo un valor si se encuentra un valor que sea menor que él
+ * @param root el valor que se debe mover hacia abajo
+ */
 	protected void pushDownRoot(int root)
 	// pre: 0 <= root < size
 	// post: moves node at index root down
