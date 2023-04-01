@@ -13,8 +13,8 @@ import java.util.*;
 public class Reader {
 	/**
 	 * This method reads the data from a txt 
-	 * @param v
-	 * @throws Exception
+	 * @param pq a Priority queue to insert new data
+	 * @throws Exception File Not found Exception
 	 */
 	public void Read(IPriorityQueue<Process> pq) throws Exception
 	{

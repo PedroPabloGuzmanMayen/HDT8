@@ -1,7 +1,18 @@
 
 import java.util.*;
+/**
+ * 
+ * @author Guztavo Cruz, Pedro Pablo Guzmán
+ * @version 1.0.0
+ *
+ */
 public class Main {
 
+	/**
+	 * Es el método en donde se ejecuta el programa
+	 * @param args
+	 * @throws Exception Ilegal Argument Expecption si se ingresa un valor inválido
+	 */
 	public static void main(String[] args) throws Exception {
 		PriorityQueueFactory factory = new PriorityQueueFactory();
 		Reader reader = new Reader();
